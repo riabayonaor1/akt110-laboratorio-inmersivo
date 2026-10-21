@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- hyperframes-registry-item: flowchart, customized electrical mechanism diagram -->
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=1200,height=640"><title>SISTEMA DE ENCENDIDO · AKT 110</title><link rel="stylesheet" href="lab.css"><script src="assets/gsap.min.js"></script></head><body>
+<div id="stage" class="clip" data-composition-id="encendido" data-system="encendido" data-fault="none" data-start="0" data-duration="12" data-fps="30" data-width="1200" data-height="640">
+<section id="encendido-diagram" style="width:100%;height:100%"><div class="lab-frame">
+<div class="topbar"><div><p class="kicker">SISTEMA DE ENCENDIDO</p><h1 class="headline">Una señal. Una chispa.</h1></div><div class="unit-number">02</div></div>
+<div class="legend"><span><i></i>Energía eléctrica</span><span class="signal"><i></i>Señal / mando</span><span class="mechanical"><i></i>Movimiento mecánico</span></div>
+<div class="diagram-viewport"><div class="diagram-world" data-layout-allow-overflow="true"><div class="nodes"><article class="node" data-node="pickup" data-active="true" aria-label="Captor: Detecta el momento del giro"><h2 class="node-name"><span>Captor</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><circle class="soft" cx="93" cy="73" r="46"/><g id="pickup-rotor"><circle class="line" cx="93" cy="73" r="32"/><path class="line" d="M93 47v52M67 73h52"/><path class="signal" d="M131 68v11" stroke-width="7"/></g><path class="signal" d="M150 60h33v27h-33z"/><path id="sensor-flash" class="signal" d="M136 67h8m-7 12h7M165 52v-8m12 10 6-6" opacity="0"/><text x="139" y="116">sensor</text><path class="soft" d="M137 73h12"/></svg><p class="node-function">Detecta el momento del giro</p><div class="fault-flag"></div></article><article class="node" data-node="cdi" data-active="false" aria-label="CDI: Coordina la descarga"><h2 class="node-name"><span>CDI</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><rect class="line" x="44" y="29" width="132" height="92" rx="8"/><text x="70" y="54">DESCARGA</text><path class="line" d="M67 82h29m0-16v33m17-33v33m0-17h28"/><path id="cdi-discharge" class="energy" d="m136 58-13 25h15l-13 25" opacity="0"/><path class="signal" d="M20 75h24"/><path class="energy" d="M176 75h24M110 8v21"/><text class="mini-tag" x="27" y="12">alimentación del encendido</text></svg><p class="node-function">Coordina la descarga</p><div class="fault-flag"></div></article><article class="node" data-node="coil" data-active="false" aria-label="Bobina: Eleva la tensión"><h2 class="node-name"><span>Bobina</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><path class="soft" d="M35 19h150v105H35zM105 31v79m9-79v79"/><path class="line" d="M55 38q32-6 18 15q32-6 0 14q32-6 0 14q32-6-18 18"/><path id="primary-winding" class="coil-light" d="M55 38q32-6 18 15q32-6 0 14q32-6 0 14q32-6-18 18"/><path class="line" d="M139 30q28-3 10 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3-10 9"/><path id="secondary-winding" class="coil-light" d="M139 30q28-3 10 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3-10 9"/><text x="47" y="140">entrada</text><text x="126" y="140">salida</text></svg><p class="node-function">Eleva la tensión</p><div class="fault-flag"></div></article><article class="node" data-node="plug" data-active="false" aria-label="Bujía: Enciende la mezcla"><h2 class="node-name"><span>Bujía</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><path class="soft" d="M36 84h148v51H36z"/><ellipse class="combustion encendido-powered" id="combustion" cx="110" cy="114" rx="50" ry="19"/><path class="line" d="M99 5h22v32H99zM93 37h34v36H93zM89 74h42v15H89zM98 89v14h24V89m-22 4h20m-20 5h20M110 104v8m14-7v15h-14"/><path class="soft" d="M95 45h30m-30 7h30m-30 7h30m-30 7h30"/><path id="spark" class="spark encendido-powered" d="m110 113 8 2-5 2 9 3" opacity="0"/><text x="45" y="132">mezcla aire + combustible</text></svg><p class="node-function">Enciende la mezcla</p><div class="fault-flag">Sin chispa</div></article></div><svg class="routes" viewBox="0 0 1136 360" preserveAspectRatio="none" aria-hidden="true"><path class="base" d="M256 180H296" stroke-dasharray="7 7"/><path id="timing-route" class="route signal" d="M256 180H296"/><circle id="timing-packet" class="packet signal" r="6"/><path class="base" d="M548 180H588"/><path id="discharge-route" class="route " d="M548 180H588"/><circle id="discharge-packet" class="packet " r="6"/><path class="base" d="M840 180H880"/><path id="highvoltage-route" class="route  encendido-powered" d="M840 180H880"/><circle id="highvoltage-packet" class="packet  encendido-powered" r="6"/></svg><p class="route-label">La señal de sincronización indica cuándo actuar. La descarga de encendido aporta energía a la chispa.</p></div></div>
+<div class="explanation"><p class="step-caption">1 · El captor detecta la posición del giro.</p><p class="takeaway">El captor marca el momento; la chispa de la bujía inicia la combustión.</p><div class="fault-explanation"><strong>La señal llega, pero no hay chispa.</strong><p>Aunque se detecta el giro y se coordina la descarga, una falla en la salida o en la bujía impide encender la mezcla.</p></div></div>
+<p class="diagram-note">El tipo de alimentación del CDI depende de la versión del sistema. Representación conceptual, sin voltajes de prueba.</p></div></section></div>
+<script src="geometry.js"></script><script>const SYSTEM_DATA={"number": "02", "title": "Una señal. Una chispa.", "kicker": "SISTEMA DE ENCENDIDO", "names": [["Captor"], ["CDI"], ["Bobina"], ["Bujía"]], "ids": ["pickup", "cdi", "coil", "plug"], "functions": ["Detecta el momento del giro", "Coordina la descarga", "Eleva la tensión", "Enciende la mezcla"], "symbols": ["<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><circle class=\"soft\" cx=\"93\" cy=\"73\" r=\"46\"/><g id=\"pickup-rotor\"><circle class=\"line\" cx=\"93\" cy=\"73\" r=\"32\"/><path class=\"line\" d=\"M93 47v52M67 73h52\"/><path class=\"signal\" d=\"M131 68v11\" stroke-width=\"7\"/></g><path class=\"signal\" d=\"M150 60h33v27h-33z\"/><path id=\"sensor-flash\" class=\"signal\" d=\"M136 67h8m-7 12h7M165 52v-8m12 10 6-6\" opacity=\"0\"/><text x=\"139\" y=\"116\">sensor</text><path class=\"soft\" d=\"M137 73h12\"/></svg>", "<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><rect class=\"line\" x=\"44\" y=\"29\" width=\"132\" height=\"92\" rx=\"8\"/><text x=\"70\" y=\"54\">DESCARGA</text><path class=\"line\" d=\"M67 82h29m0-16v33m17-33v33m0-17h28\"/><path id=\"cdi-discharge\" class=\"energy\" d=\"m136 58-13 25h15l-13 25\" opacity=\"0\"/><path class=\"signal\" d=\"M20 75h24\"/><path class=\"energy\" d=\"M176 75h24M110 8v21\"/><text class=\"mini-tag\" x=\"27\" y=\"12\">alimentación del encendido</text></svg>", "<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><path class=\"soft\" d=\"M35 19h150v105H35zM105 31v79m9-79v79\"/><path class=\"line\" d=\"M55 38q32-6 18 15q32-6 0 14q32-6 0 14q32-6-18 18\"/><path id=\"primary-winding\" class=\"coil-light\" d=\"M55 38q32-6 18 15q32-6 0 14q32-6 0 14q32-6-18 18\"/><path class=\"line\" d=\"M139 30q28-3 10 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3-10 9\"/><path id=\"secondary-winding\" class=\"coil-light\" d=\"M139 30q28-3 10 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3 0 9q28-3-10 9\"/><text x=\"47\" y=\"140\">entrada</text><text x=\"126\" y=\"140\">salida</text></svg>", "<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><path class=\"soft\" d=\"M36 84h148v51H36z\"/><ellipse class=\"combustion encendido-powered\" id=\"combustion\" cx=\"110\" cy=\"114\" rx=\"50\" ry=\"19\"/><path class=\"line\" d=\"M99 5h22v32H99zM93 37h34v36H93zM89 74h42v15H89zM98 89v14h24V89m-22 4h20m-20 5h20M110 104v8m14-7v15h-14\"/><path class=\"soft\" d=\"M95 45h30m-30 7h30m-30 7h30m-30 7h30\"/><path id=\"spark\" class=\"spark encendido-powered\" d=\"m110 113 8 2-5 2 9 3\" opacity=\"0\"/><text x=\"45\" y=\"132\">mezcla aire + combustible</text></svg>"], "starts": [0, 2.8, 5.5, 8.2], "captions": ["1 · El captor detecta la posición del giro.", "2 · El CDI coordina cuándo descargar.", "3 · La bobina eleva la tensión.", "4 · La bujía enciende la mezcla."], "takeaway": "El captor marca el momento; la chispa de la bujía inicia la combustión.", "route_label": "La señal de sincronización indica cuándo actuar. La descarga de encendido aporta energía a la chispa.", "note": "El tipo de alimentación del CDI depende de la versión del sistema. Representación conceptual, sin voltajes de prueba.", "fault_node": "plug", "fault_label": "Sin chispa", "fault_title": "La señal llega, pero no hay chispa.", "fault_copy": "Aunque se detecta el giro y se coordina la descarga, una falla en la salida o en la bujía impide encender la mezcla.", "routes": [{"id": "timing", "d": "M256 180H296", "kind": "signal", "start": 2.3, "end": 3.1, "power": false}, {"id": "discharge", "d": "M548 180H588", "kind": "energy", "start": 4.5, "end": 5.7, "power": false}, {"id": "highvoltage", "d": "M840 180H880", "kind": "energy", "start": 7.4, "end": 8.6, "power": true}], "id": "encendido"};
+/* Choreography adapted from registry flowchart, ui-focus-zoom and svg-stroke-trace.
+   The mechanical geometry is the subject-specific gap recorded in shot-plan.json.
+   ONE time driver gives deterministic signal routes and mechanism states under any seek. */
+const root=document.getElementById('stage');
+const system=SYSTEM_DATA.id;
+const nodeEls=Array.from(root.querySelectorAll('.node'));
+const world=root.querySelector('.diagram-world');
+const caption=root.querySelector('.step-caption');
+const byId=id=>document.getElementById(id);
+const clamp=(n,a=0,b=1)=>Math.min(b,Math.max(a,n));
+const unit=(t,a,b)=>clamp((t-a)/(b-a));
+const smooth=(t,a,b)=>gsap.parseEase('power2.inOut')(unit(t,a,b));
+const opacity=(id,value)=>{const el=byId(id);if(el)el.style.opacity=String(clamp(value));};
+const rotate=(id,deg,x,y)=>{const el=byId(id);if(el)el.setAttribute('transform',`rotate(${deg} ${x} ${y})`);};
+const wave=(x,y,w,h,cycles,rectified=false)=>{let d='';for(let i=0;i<=100;i++){const px=x+i*w/100;const sy=Math.sin(i/100*Math.PI*2*cycles);const py=y-(rectified?Math.abs(sy):sy)*h;d+=(i?'L':'M')+px.toFixed(2)+' '+py.toFixed(2);}return d;};
+const routes=window.bakeRouteGeometry(SYSTEM_DATA.routes);
+function updateRoutes(t){
+ routes.forEach(r=>{
+  const reveal=unit(t,r.start,r.end);
+  r.path.style.strokeDasharray=r.kind==='signal'&&reveal>=1?'7 7':String(r.length);
+  r.path.style.opacity=String(reveal>0?1:0);
+  r.path.style.strokeDashoffset=r.kind==='signal'&&reveal>=1?'0':String(r.length*(1-reveal));
+  const active=t>=r.end&&t<11;
+  const p=active?((t-r.end)/1.05)%1:reveal;
+  const idx=Math.min(159,Math.floor(p*160));const blend=p*160-idx;
+  const point={x:r.points[idx].x+(r.points[idx+1].x-r.points[idx].x)*blend,y:r.points[idx].y+(r.points[idx+1].y-r.points[idx].y)*blend};
+  r.packet.setAttribute('cx',point.x);r.packet.setAttribute('cy',point.y);
+  r.packet.style.opacity=String(t>r.start&&t<11?(active?.92:reveal):0);
+ });
+}
+function drawArranque(t){
+ byId('switch-cap').setAttribute('transform',`translate(0 ${12*smooth(t,2.5,2.9)})`);
+ rotate('relay-arm',40*smooth(t,5,5.6),135,45);
+ opacity('relay-field',smooth(t,4.8,5.15));
+ byId('battery-bars').style.opacity=String(1-.15*smooth(t,8.3,10));
+}
+function drawEncendido(t){
+ rotate('pickup-rotor',Math.min(t,2.3)/2.3*360,93,73);
+ opacity('sensor-flash',t>=2.05&&t<3.1?Math.sin(unit(t,2.05,3.1)*Math.PI):0);
+ opacity('cdi-discharge',smooth(t,3.2,3.7)*(1-.35*smooth(t,5.4,6.4)));
+ opacity('primary-winding',smooth(t,5.5,5.9)*(1-.65*smooth(t,6.5,7.2)));
+ opacity('secondary-winding',smooth(t,6.25,6.7));
+ const spark1=1-Math.abs((t-8.9)/.3),spark2=1-Math.abs((t-10)/.3);
+ opacity('spark',Math.max(0,spark1,spark2));
+ const fire=unit(t,8.9,9.6);opacity('combustion',.34*Math.sin(fire*Math.PI));
+ byId('combustion').setAttribute('transform',`translate(110 114) scale(${.35+.65*fire}) translate(-110 -114)`);
+}
+function drawCarga(t){
+ const angle=Math.max(0,t-.25)*135;
+ rotate('crankshaft',angle,110,103);
+ const dy=Math.sin(angle*Math.PI/180)*11;
+ byId('piston').setAttribute('transform',`translate(0 ${dy})`);
+ byId('connecting-rod').setAttribute('d',`M110 ${49+dy}L${110+Math.cos(angle*Math.PI/180)*19} ${103+Math.sin(angle*Math.PI/180)*19}`);
+ rotate('generator-rotor',Math.max(0,t-1.5)*150,110,68);
+ opacity('induction',t>2.5?.3+.6*(.5+.5*Math.sin(t*4)):0);
+ const ac=byId('ac-wave');ac.style.strokeDashoffset=String(waveLengths['ac-wave']*(1-unit(t,3,5.1)));
+ const rw=byId('rectified-wave'),gw=byId('regulated-wave');
+ rw.style.strokeDashoffset=String(waveLengths['rectified-wave']*(1-unit(t,5.4,6.6)));
+ gw.style.strokeDashoffset=String(waveLengths['regulated-wave']*(1-unit(t,6.7,8.1)));
+ byId('charge-fill').setAttribute('transform',`translate(40 82) scale(${.15+.85*smooth(t,9,11)} 1) translate(-40 -82)`);
+ opacity('lamp-glow',.36*smooth(t,9.2,9.6));
+}
+let frameStep=0;
+function renderFrame(t){
+ let step=0;for(let i=0;i<SYSTEM_DATA.starts.length;i++)if(t>=SYSTEM_DATA.starts[i])step=i;
+ frameStep=step;root.dataset.step=String(step);
+ nodeEls.forEach((n,i)=>n.dataset.active=String(i===step));
+ caption.textContent=SYSTEM_DATA.captions[step];
+ updateRoutes(t);
+ // Adapted ui-focus-zoom servo; restrained emphasis keeps all names and routes in frame.
+ const settle=smooth(t,SYSTEM_DATA.starts[step]+.1,SYSTEM_DATA.starts[step]+.85);
+ const returnWide=1-smooth(t,10.4,11.2);
+ const scale=1+.018*settle*returnWide;
+ const anchor=[12,4,-4,-12][step]*settle*returnWide;
+ world.style.transform=`translate(${anchor}px,0px) scale(${scale})`;
+ if(system==='arranque')drawArranque(t);
+ else if(system==='encendido')drawEncendido(t);
+ else drawCarga(t);
+}
+const waveLengths={};
+if(system==='carga'){
+ const ac=byId('ac-wave');ac.setAttribute('d',wave(387,322,100,13,2));
+ ['ac-wave','rectified-wave','regulated-wave'].forEach(id=>{waveLengths[id]=window.bakePathLength(byId(id));});
+}
+const clock={time:0};
+const tl=gsap.timeline({paused:true});
+SYSTEM_DATA.starts.forEach((at,i)=>tl.addLabel('step-'+i,at));
+tl.to(clock,{time:12,duration:12,ease:'none',onUpdate:()=>renderFrame(clock.time)},0);
+renderFrame(0);
+
+window.__timelines=window.__timelines||{};
+window.__timelines[SYSTEM_DATA.id]=tl;
+tl.seek(0);
+window.__lab={system,duration:12,timeline:tl,getStep:()=>frameStep,renderFrame,
+ setFault(value){root.dataset.fault=['none','battery','spark','charge'].includes(value)?value:'none';}
+};
+</script><script src="bridge.js"></script></body></html>

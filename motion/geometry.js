@@ -1,0 +1,3 @@
+/* Static geometry is frozen before the paused composition timeline is registered. */
+window.bakePathLength=function(path){const length=path.getTotalLength();path.style.strokeDasharray=String(length);path.style.strokeDashoffset=String(length);return length;};
+window.bakeRouteGeometry=function(configs){return configs.map(config=>{const path=document.getElementById(config.id+'-route'),packet=document.getElementById(config.id+'-packet');const length=window.bakePathLength(path);const points=Array.from({length:161},(_,i)=>{const p=path.getPointAtLength(length*i/160);return{x:p.x,y:p.y};});return{...config,path,packet,length,points};});};

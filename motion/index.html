@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- hyperframes-registry-item: flowchart, customized electrical mechanism diagram -->
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=1200,height=640"><title>SISTEMA DE ARRANQUE · AKT 110</title><link rel="stylesheet" href="lab.css"><script src="assets/gsap.min.js"></script></head><body>
+<div id="stage" class="clip" data-composition-id="arranque" data-system="arranque" data-fault="none" data-start="0" data-duration="12" data-fps="30" data-width="1200" data-height="640">
+<section id="arranque-diagram" style="width:100%;height:100%"><div class="lab-frame">
+<div class="topbar"><div><p class="kicker">SISTEMA DE ARRANQUE</p><h1 class="headline">De electricidad a movimiento</h1></div><div class="unit-number">01</div></div>
+<div class="legend"><span><i></i>Energía eléctrica</span><span class="signal"><i></i>Señal / mando</span><span class="mechanical"><i></i>Movimiento mecánico</span></div>
+<div class="diagram-viewport"><div class="diagram-world" data-layout-allow-overflow="true"><div class="nodes"><article class="node" data-node="battery" data-active="true" aria-label="Batería: Almacena electricidad"><h2 class="node-name"><span>Batería</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><path class="line" d="M60 30h100v90H60zM78 30V20h19v10m27 0V20h19v10"/><path class="soft" d="M75 101h70M76 113h68"/><path class="line" d="M77 49h15m-7.5-7.5v15m42-7.5h15"/><g id="battery-bars"><rect class="fill-energy" x="76" y="69" width="10" height="25" rx="2"/><rect class="fill-energy" x="91" y="69" width="10" height="25" rx="2"/><rect class="fill-energy" x="106" y="69" width="10" height="25" rx="2"/><rect class="fill-energy" x="121" y="69" width="10" height="25" rx="2"/><rect class="fill-energy" x="136" y="69" width="10" height="25" rx="2"/></g></svg><p class="node-function">Almacena electricidad</p><div class="fault-flag">Batería descargada</div></article><article class="node" data-node="switch" data-active="false" aria-label="Pulsador: Da la orden de arranque"><h2 class="node-name"><span>Pulsador</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><path class="soft" d="M48 93h124M58 93v25h104V93"/><path class="line" d="M66 119h30m28 0h30"/><circle class="fill-signal" cx="98" cy="119" r="5"/><circle class="fill-signal" cx="123" cy="119" r="5"/><g id="switch-cap"><rect class="fill-panel" x="65" y="27" width="90" height="36" rx="14" stroke="var(--signal)" stroke-width="3"/><path class="line" d="M102 64v31m16-31v31m-28 0h40"/><path class="signal" d="M96 106h28"/></g><path class="signal" d="M110 8v9m-10-5 10 8 10-8"/></svg><p class="node-function">Da la orden de arranque</p><div class="fault-flag"></div></article><article class="node" data-node="relay" data-active="false" aria-label="Relé: Conecta la corriente de potencia"><h2 class="node-name"><span>Relé</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><path class="soft" d="M26 21h168v108H26z"/><path class="line" d="M41 102V70q7-18 14 0q7-18 14 0q7-18 14 0v32"/><path class="soft" d="M42 87h41"/><path class="energy" d="M104 45h30m34 0h17v61h-20"/><circle class="fill-energy" cx="135" cy="45" r="5"/><circle class="fill-energy" cx="167" cy="45" r="5"/><path id="relay-arm" class="line arranque-powered" d="M135 45l28-24"/><path class="line fault-rest arranque-rest" d="M135 45l28-24"/><path id="relay-field" class="signal arranque-powered" d="M87 71l18-11m-18 25h24m-24 14 18 11" opacity="0"/><text x="44" y="122">bobina</text><text x="109" y="122">contacto</text></svg><p class="node-function">Conecta la corriente de potencia</p><div class="fault-flag"></div></article><article class="node" data-node="starter" data-active="false" aria-label="Motor de arranque: Inicia el giro del cigüeñal"><h2 class="node-name"><span>Motor de</span><span>arranque</span></h2><svg class="symbol" viewBox="0 0 220 140" aria-hidden="true"><path class="line" d="M44 31h114v80H44zM33 44h11v54H33m125-31h34v10h-34"/><path class="soft" d="M57 42v58m87-58v58"/><g id="starter-rotor" class="arranque-powered"><circle class="energy" cx="101" cy="72" r="27"/><path class="line" d="M101 48v48M77 72h48m-41-17 34 34m0-34-34 34"/></g><g class="fault-rest arranque-rest"><circle class="soft" cx="101" cy="72" r="27"/><path class="soft" d="M101 48v48M77 72h48"/></g><path class="line" d="M180 100q22-20 27 1m-7-5 7 5 5-7"/><text x="48" y="137">hacia el cigüeñal</text></svg><p class="node-function">Inicia el giro del cigüeñal</p><div class="fault-flag"></div></article></div><svg class="routes" viewBox="0 0 1136 360" preserveAspectRatio="none" aria-hidden="true"><path class="base" d="M256 180H296" stroke-dasharray="7 7"/><path id="control1-route" class="route signal" d="M256 180H296"/><circle id="control1-packet" class="packet signal" r="6"/><path class="base" d="M548 180H588" stroke-dasharray="7 7"/><path id="control2-route" class="route signal" d="M548 180H588"/><circle id="control2-packet" class="packet signal" r="6"/><path class="base" d="M128 300V324H712V300"/><path id="power1-route" class="route  arranque-powered" d="M128 300V324H712V300"/><circle id="power1-packet" class="packet  arranque-powered" r="6"/><path class="base" d="M840 180H880"/><path id="power2-route" class="route  arranque-powered" d="M840 180H880"/><circle id="power2-packet" class="packet  arranque-powered" r="6"/></svg><p class="route-label">Mando: pulsador → bobina del relé. Potencia: batería → contacto del relé → motor de arranque.</p></div></div>
+<div class="explanation"><p class="step-caption">1 · La batería guarda la energía.</p><p class="takeaway">La electricidad produce el giro inicial; después, la combustión mantiene el motor funcionando.</p><div class="fault-explanation"><strong>¿Qué ocurre sin energía suficiente?</strong><p>El pulsador puede dar la orden, pero el relé y el motor de arranque no reciben energía suficiente para iniciar el giro.</p></div></div>
+<p class="diagram-note">Esquema funcional simplificado: no detalla retornos, protecciones ni conexiones de instalación.</p></div></section></div>
+<script src="geometry.js"></script><script>const SYSTEM_DATA={"number": "01", "title": "De electricidad a movimiento", "kicker": "SISTEMA DE ARRANQUE", "names": [["Batería"], ["Pulsador"], ["Relé"], ["Motor de", "arranque"]], "ids": ["battery", "switch", "relay", "starter"], "functions": ["Almacena electricidad", "Da la orden de arranque", "Conecta la corriente de potencia", "Inicia el giro del cigüeñal"], "symbols": ["<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><path class=\"line\" d=\"M60 30h100v90H60zM78 30V20h19v10m27 0V20h19v10\"/><path class=\"soft\" d=\"M75 101h70M76 113h68\"/><path class=\"line\" d=\"M77 49h15m-7.5-7.5v15m42-7.5h15\"/><g id=\"battery-bars\"><rect class=\"fill-energy\" x=\"76\" y=\"69\" width=\"10\" height=\"25\" rx=\"2\"/><rect class=\"fill-energy\" x=\"91\" y=\"69\" width=\"10\" height=\"25\" rx=\"2\"/><rect class=\"fill-energy\" x=\"106\" y=\"69\" width=\"10\" height=\"25\" rx=\"2\"/><rect class=\"fill-energy\" x=\"121\" y=\"69\" width=\"10\" height=\"25\" rx=\"2\"/><rect class=\"fill-energy\" x=\"136\" y=\"69\" width=\"10\" height=\"25\" rx=\"2\"/></g></svg>", "<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><path class=\"soft\" d=\"M48 93h124M58 93v25h104V93\"/><path class=\"line\" d=\"M66 119h30m28 0h30\"/><circle class=\"fill-signal\" cx=\"98\" cy=\"119\" r=\"5\"/><circle class=\"fill-signal\" cx=\"123\" cy=\"119\" r=\"5\"/><g id=\"switch-cap\"><rect class=\"fill-panel\" x=\"65\" y=\"27\" width=\"90\" height=\"36\" rx=\"14\" stroke=\"var(--signal)\" stroke-width=\"3\"/><path class=\"line\" d=\"M102 64v31m16-31v31m-28 0h40\"/><path class=\"signal\" d=\"M96 106h28\"/></g><path class=\"signal\" d=\"M110 8v9m-10-5 10 8 10-8\"/></svg>", "<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><path class=\"soft\" d=\"M26 21h168v108H26z\"/><path class=\"line\" d=\"M41 102V70q7-18 14 0q7-18 14 0q7-18 14 0v32\"/><path class=\"soft\" d=\"M42 87h41\"/><path class=\"energy\" d=\"M104 45h30m34 0h17v61h-20\"/><circle class=\"fill-energy\" cx=\"135\" cy=\"45\" r=\"5\"/><circle class=\"fill-energy\" cx=\"167\" cy=\"45\" r=\"5\"/><path id=\"relay-arm\" class=\"line arranque-powered\" d=\"M135 45l28-24\"/><path class=\"line fault-rest arranque-rest\" d=\"M135 45l28-24\"/><path id=\"relay-field\" class=\"signal arranque-powered\" d=\"M87 71l18-11m-18 25h24m-24 14 18 11\" opacity=\"0\"/><text x=\"44\" y=\"122\">bobina</text><text x=\"109\" y=\"122\">contacto</text></svg>", "<svg class=\"symbol\" viewBox=\"0 0 220 140\" aria-hidden=\"true\"><path class=\"line\" d=\"M44 31h114v80H44zM33 44h11v54H33m125-31h34v10h-34\"/><path class=\"soft\" d=\"M57 42v58m87-58v58\"/><g id=\"starter-rotor\" class=\"arranque-powered\"><circle class=\"energy\" cx=\"101\" cy=\"72\" r=\"27\"/><path class=\"line\" d=\"M101 48v48M77 72h48m-41-17 34 34m0-34-34 34\"/></g><g class=\"fault-rest arranque-rest\"><circle class=\"soft\" cx=\"101\" cy=\"72\" r=\"27\"/><path class=\"soft\" d=\"M101 48v48M77 72h48\"/></g><path class=\"line\" d=\"M180 100q22-20 27 1m-7-5 7 5 5-7\"/><text x=\"48\" y=\"137\">hacia el cigüeñal</text></svg>"], "starts": [0, 2.5, 5, 7.8], "captions": ["1 · La batería guarda la energía.", "2 · El pulsador envía la orden al relé.", "3 · El relé cierra el paso de corriente.", "4 · El arranque hace girar el motor."], "takeaway": "La electricidad produce el giro inicial; después, la combustión mantiene el motor funcionando.", "route_label": "Mando: pulsador → bobina del relé. Potencia: batería → contacto del relé → motor de arranque.", "note": "Esquema funcional simplificado: no detalla retornos, protecciones ni conexiones de instalación.", "fault_node": "battery", "fault_label": "Batería descargada", "fault_title": "¿Qué ocurre sin energía suficiente?", "fault_copy": "El pulsador puede dar la orden, pero el relé y el motor de arranque no reciben energía suficiente para iniciar el giro.", "routes": [{"id": "control1", "d": "M256 180H296", "kind": "signal", "start": 2.8, "end": 3.6, "power": false}, {"id": "control2", "d": "M548 180H588", "kind": "signal", "start": 3.9, "end": 4.8, "power": false}, {"id": "power1", "d": "M128 300V324H712V300", "kind": "energy", "start": 5.7, "end": 7.2, "power": true}, {"id": "power2", "d": "M840 180H880", "kind": "energy", "start": 7.4, "end": 8.3, "power": true}], "id": "arranque"};
+/* Choreography adapted from registry flowchart, ui-focus-zoom and svg-stroke-trace.
+   The mechanical geometry is the subject-specific gap recorded in shot-plan.json.
+   ONE time driver gives deterministic signal routes and mechanism states under any seek. */
+const root=document.getElementById('stage');
+const system=SYSTEM_DATA.id;
+const nodeEls=Array.from(root.querySelectorAll('.node'));
+const world=root.querySelector('.diagram-world');
+const caption=root.querySelector('.step-caption');
+const byId=id=>document.getElementById(id);
+const clamp=(n,a=0,b=1)=>Math.min(b,Math.max(a,n));
+const unit=(t,a,b)=>clamp((t-a)/(b-a));
+const smooth=(t,a,b)=>gsap.parseEase('power2.inOut')(unit(t,a,b));
+const opacity=(id,value)=>{const el=byId(id);if(el)el.style.opacity=String(clamp(value));};
+const rotate=(id,deg,x,y)=>{const el=byId(id);if(el)el.setAttribute('transform',`rotate(${deg} ${x} ${y})`);};
+const wave=(x,y,w,h,cycles,rectified=false)=>{let d='';for(let i=0;i<=100;i++){const px=x+i*w/100;const sy=Math.sin(i/100*Math.PI*2*cycles);const py=y-(rectified?Math.abs(sy):sy)*h;d+=(i?'L':'M')+px.toFixed(2)+' '+py.toFixed(2);}return d;};
+const routes=window.bakeRouteGeometry(SYSTEM_DATA.routes);
+function updateRoutes(t){
+ routes.forEach(r=>{
+  const reveal=unit(t,r.start,r.end);
+  r.path.style.strokeDasharray=r.kind==='signal'&&reveal>=1?'7 7':String(r.length);
+  r.path.style.opacity=String(reveal>0?1:0);
+  r.path.style.strokeDashoffset=r.kind==='signal'&&reveal>=1?'0':String(r.length*(1-reveal));
+  const active=t>=r.end&&t<11;
+  const p=active?((t-r.end)/1.05)%1:reveal;
+  const idx=Math.min(159,Math.floor(p*160));const blend=p*160-idx;
+  const point={x:r.points[idx].x+(r.points[idx+1].x-r.points[idx].x)*blend,y:r.points[idx].y+(r.points[idx+1].y-r.points[idx].y)*blend};
+  r.packet.setAttribute('cx',point.x);r.packet.setAttribute('cy',point.y);
+  r.packet.style.opacity=String(t>r.start&&t<11?(active?.92:reveal):0);
+ });
+}
+function drawArranque(t){
+ byId('switch-cap').setAttribute('transform',`translate(0 ${12*smooth(t,2.5,2.9)})`);
+ rotate('relay-arm',40*smooth(t,5,5.6),135,45);
+ opacity('relay-field',smooth(t,4.8,5.15));
+ byId('battery-bars').style.opacity=String(1-.15*smooth(t,8.3,10));
+}
+function drawEncendido(t){
+ rotate('pickup-rotor',Math.min(t,2.3)/2.3*360,93,73);
+ opacity('sensor-flash',t>=2.05&&t<3.1?Math.sin(unit(t,2.05,3.1)*Math.PI):0);
+ opacity('cdi-discharge',smooth(t,3.2,3.7)*(1-.35*smooth(t,5.4,6.4)));
+ opacity('primary-winding',smooth(t,5.5,5.9)*(1-.65*smooth(t,6.5,7.2)));
+ opacity('secondary-winding',smooth(t,6.25,6.7));
+ const spark1=1-Math.abs((t-8.9)/.3),spark2=1-Math.abs((t-10)/.3);
+ opacity('spark',Math.max(0,spark1,spark2));
+ const fire=unit(t,8.9,9.6);opacity('combustion',.34*Math.sin(fire*Math.PI));
+ byId('combustion').setAttribute('transform',`translate(110 114) scale(${.35+.65*fire}) translate(-110 -114)`);
+}
+function drawCarga(t){
+ const angle=Math.max(0,t-.25)*135;
+ rotate('crankshaft',angle,110,103);
+ const dy=Math.sin(angle*Math.PI/180)*11;
+ byId('piston').setAttribute('transform',`translate(0 ${dy})`);
+ byId('connecting-rod').setAttribute('d',`M110 ${49+dy}L${110+Math.cos(angle*Math.PI/180)*19} ${103+Math.sin(angle*Math.PI/180)*19}`);
+ rotate('generator-rotor',Math.max(0,t-1.5)*150,110,68);
+ opacity('induction',t>2.5?.3+.6*(.5+.5*Math.sin(t*4)):0);
+ const ac=byId('ac-wave');ac.style.strokeDashoffset=String(waveLengths['ac-wave']*(1-unit(t,3,5.1)));
+ const rw=byId('rectified-wave'),gw=byId('regulated-wave');
+ rw.style.strokeDashoffset=String(waveLengths['rectified-wave']*(1-unit(t,5.4,6.6)));
+ gw.style.strokeDashoffset=String(waveLengths['regulated-wave']*(1-unit(t,6.7,8.1)));
+ byId('charge-fill').setAttribute('transform',`translate(40 82) scale(${.15+.85*smooth(t,9,11)} 1) translate(-40 -82)`);
+ opacity('lamp-glow',.36*smooth(t,9.2,9.6));
+}
+let frameStep=0;
+function renderFrame(t){
+ let step=0;for(let i=0;i<SYSTEM_DATA.starts.length;i++)if(t>=SYSTEM_DATA.starts[i])step=i;
+ frameStep=step;root.dataset.step=String(step);
+ nodeEls.forEach((n,i)=>n.dataset.active=String(i===step));
+ caption.textContent=SYSTEM_DATA.captions[step];
+ updateRoutes(t);
+ // Adapted ui-focus-zoom servo; restrained emphasis keeps all names and routes in frame.
+ const settle=smooth(t,SYSTEM_DATA.starts[step]+.1,SYSTEM_DATA.starts[step]+.85);
+ const returnWide=1-smooth(t,10.4,11.2);
+ const scale=1+.018*settle*returnWide;
+ const anchor=[12,4,-4,-12][step]*settle*returnWide;
+ world.style.transform=`translate(${anchor}px,0px) scale(${scale})`;
+ if(system==='arranque')drawArranque(t);
+ else if(system==='encendido')drawEncendido(t);
+ else drawCarga(t);
+}
+const waveLengths={};
+if(system==='carga'){
+ const ac=byId('ac-wave');ac.setAttribute('d',wave(387,322,100,13,2));
+ ['ac-wave','rectified-wave','regulated-wave'].forEach(id=>{waveLengths[id]=window.bakePathLength(byId(id));});
+}
+const clock={time:0};
+const tl=gsap.timeline({paused:true});
+SYSTEM_DATA.starts.forEach((at,i)=>tl.addLabel('step-'+i,at));
+tl.to(clock,{time:12,duration:12,ease:'none',onUpdate:()=>renderFrame(clock.time)},0);
+renderFrame(0);
+tl.fromTo("#starter-rotor",{attr:{transform:"rotate(0 101 72)"}},{attr:{transform:"rotate(1073 101 72)"},duration:3.7,ease:"none"},8.3);
+window.__timelines=window.__timelines||{};
+window.__timelines[SYSTEM_DATA.id]=tl;
+tl.seek(0);
+window.__lab={system,duration:12,timeline:tl,getStep:()=>frameStep,renderFrame,
+ setFault(value){root.dataset.fault=['none','battery','spark','charge'].includes(value)?value:'none';}
+};
+</script><script src="bridge.js"></script></body></html>
